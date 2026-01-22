@@ -1,15 +1,16 @@
-# CLAUDE.md - AI Assistant Guidelines for SortFlow
+# CLAUDE.md - AI Assistant Guidelines for FileForge
 
 ## Project Overview
 
-**Project Name:** SortFlow (File Organization Utility)
+**Project Name:** FileForge - Forging Order from Chaos
+**Tagline:** "Transform your cluttered folders into perfectly organized collections"
 **Repository:** SO
 **Owner:** CrAvila
 **License:** Open Source (MIT)
 **Platform:** Cross-platform (Windows, Linux, macOS)
 **Language:** C++20
 
-SortFlow is a high-performance, cross-platform file organization utility that automatically categorizes, organizes, and intelligently renames files. Originally conceived as an Operating Systems final project at UPAEP (Universidad Popular Autónoma del Estado de Puebla), this tool leverages parallelization and modern C++20 best practices.
+FileForge is a high-performance, cross-platform file organization utility that automatically categorizes, organizes, and intelligently renames files. Originally conceived as an Operating Systems final project at UPAEP (Universidad Popular Autónoma del Estado de Puebla), this tool leverages parallelization and modern C++20 best practices to forge order from digital chaos.
 
 ## Key Features
 
@@ -80,8 +81,8 @@ SO/
 │       └── resources/        # GUI resources
 │
 ├── include/                  # Public headers
-│   └── sortflow/
-│       └── sortflow.hpp      # Main include header
+│   └── fileforge/
+│       └── fileforge.hpp      # Main include header
 │
 ├── tests/                    # Test suite
 │   ├── CMakeLists.txt
@@ -165,22 +166,22 @@ ctest -C Release --output-on-failure
 
 ```bash
 # CLI - Organize current directory
-./sortflow-cli .
+./fileforge-cli .
 
 # CLI - Organize specific directory
-./sortflow-cli /path/to/folder
+./fileforge-cli /path/to/folder
 
 # CLI - Organize Downloads folder
-./sortflow-cli ~/Downloads
+./fileforge-cli ~/Downloads
 
 # CLI - Dry run (preview changes)
-./sortflow-cli --dry-run /path/to/folder
+./fileforge-cli --dry-run /path/to/folder
 
 # CLI - With custom config
-./sortflow-cli --config config.json /path/to/folder
+./fileforge-cli --config config.json /path/to/folder
 
 # GUI - Launch graphical interface
-./sortflow-gui
+./fileforge-gui
 ```
 
 ## Development Workflow
@@ -235,7 +236,7 @@ ctest -T memcheck
   - Variables: `camelCase` (e.g., `fileCount`)
   - Constants: `UPPER_SNAKE_CASE` (e.g., `MAX_THREADS`)
   - Member variables: `m_` prefix (e.g., `m_config`)
-  - Namespaces: `lowercase` (e.g., `sortflow`)
+  - Namespaces: `lowercase` (e.g., `fileforge`)
 - **Indentation**: 4 spaces (no tabs)
 - **Braces**: K&R style (opening brace on same line)
 - **Headers**: Use `#pragma once` for include guards
@@ -254,7 +255,7 @@ ctest -T memcheck
 
 #include "types.hpp"
 
-namespace sortflow {
+namespace fileforge {
 
 class FileScanner {
 public:
@@ -276,7 +277,7 @@ private:
                      std::vector<FileInfo>& results);
 };
 
-} // namespace sortflow
+} // namespace fileforge
 ```
 
 ### File Organization Categories
@@ -412,23 +413,27 @@ All operations logged in JSON Lines format:
     "dry_run": false,
     "parallel_threads": 4,
     "generate_log": true,
-    "log_file": "sortflow_log.jsonl"
+    "log_file": "fileforge_log.jsonl"
   }
 }
 ```
 
 ## Roadmap
 
-### Completed
-- [x] Core file organization engine
-- [x] File type categorization
-- [x] Intelligent renaming system
-- [x] Parallelization support
-- [x] Comprehensive logging
-- [x] CLI interface
-- [x] Cross-platform GUI
+### Phase 1 - Core (In Progress)
+- [ ] Core file organization engine
+- [ ] File type categorization
+- [ ] Intelligent renaming system
+- [ ] Parallelization support
+- [ ] Comprehensive logging
+- [ ] CLI interface
 
-### Future
+### Phase 2 - GUI & Polish
+- [ ] Cross-platform Qt6 GUI
+- [ ] Landing page with React
+- [ ] Documentation and README
+
+### Phase 3 - Advanced Features
 - [ ] File content analysis (for intelligent naming)
 - [ ] Duplicate file detection
 - [ ] Cloud storage integration
