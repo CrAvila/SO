@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forge-gradient: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #c2410c 100%);
+}
+
+body {
+  @apply bg-steel-900 text-steel-100 font-display antialiased;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--forge-gradient);
+}
+
+.forge-button {
+  @apply px-8 py-4 bg-forge-500 hover:bg-forge-600 text-white font-semibold rounded-lg
+         transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105
+         focus:outline-none focus:ring-4 focus:ring-forge-500/50;
+}
+
+.forge-button-outline {
+  @apply px-8 py-4 border-2 border-forge-500 text-forge-400 hover:bg-forge-500/10
+         font-semibold rounded-lg transition-all duration-300
+         focus:outline-none focus:ring-4 focus:ring-forge-500/50;
+}
+
+.feature-card {
+  @apply bg-steel-800/50 backdrop-blur-sm border border-steel-700 rounded-xl p-6
+         hover:border-forge-500/50 transition-all duration-300 hover:-translate-y-1;
+}
+
+.code-block {
+  @apply bg-steel-800 border border-steel-700 rounded-lg p-4 font-mono text-sm
+         overflow-x-auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-steel-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-steel-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-steel-500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }

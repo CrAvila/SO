@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "categories": {
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp", ".bmp", ".ico", ".tiff", ".tif", ".heic", ".heif", ".raw", ".psd"],
+    "Documents": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt", ".md", ".tex", ".pages", ".epub", ".mobi"],
+    "Spreadsheets": [".xls", ".xlsx", ".csv", ".ods", ".numbers", ".tsv"],
+    "Presentations": [".ppt", ".pptx", ".odp", ".key"],
+    "Videos": [".mp4", ".mkv", ".avi", ".mov", ".wmv", ".webm", ".flv", ".m4v", ".mpeg", ".mpg", ".3gp"],
+    "Audio": [".mp3", ".wav", ".flac", ".aac", ".ogg", ".m4a", ".wma", ".aiff", ".opus", ".mid", ".midi"],
+    "Archives": [".zip", ".rar", ".7z", ".tar", ".gz", ".bz2", ".xz", ".tgz", ".tbz2", ".lz", ".lzma"],
+    "Code": [".cpp", ".hpp", ".c", ".h", ".py", ".js", ".ts", ".java", ".rs", ".go", ".rb", ".php", ".swift", ".kt", ".scala", ".cs", ".vb", ".lua", ".pl", ".sh", ".bash", ".zsh", ".ps1", ".bat", ".cmd"],
+    "Data": [".json", ".xml", ".yaml", ".yml", ".sql", ".db", ".sqlite", ".sqlite3", ".mdb", ".accdb", ".toml", ".ini", ".cfg"],
+    "Executables": [".exe", ".msi", ".dmg", ".app", ".deb", ".rpm", ".appimage", ".apk", ".ipa", ".jar", ".run"],
+    "Other": []
+  },
+  "options": {
+    "create_organized_folder": true,
+    "organized_folder_name": "Organized",
+    "enable_renaming": true,
+    "dry_run": false,
+    "parallel_threads": 4,
+    "generate_log": true,
+    "log_file": "fileforge_log.jsonl",
+    "recursive": false,
+    "include_hidden": false
+  },
+  "rename_pattern": {
+    "include_category": true,
+    "include_date": true,
+    "include_descriptor": true,
+    "include_version": true,
+    "separator": "_",
+    "date_format": "%Y-%m-%d"
+  }
+}
